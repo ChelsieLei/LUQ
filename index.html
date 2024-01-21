@@ -14,20 +14,20 @@
     <!-- <base href="/"> -->
 
         <!--FACEBOOK-->
-    <meta property="og:image" content="https://mikhailkennerley.com/2pcnet/imgs/2pcnet.webp">
+    <meta property="og:image" content="https://chelsielei.github.io/LUQ/imgs/luq.webp">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="682">
     <meta property="og:image:height" content="682">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mikhailkennerley.com/2pcnet/"/>
+    <meta property="og:url" content="https://chelsielei.github.io/LUQ/"/>
     <meta property="og:title" content="2PCNet" />
-    <meta property="og:description" content="2PCNet: Two-Phase Consistency Training for Day-to-Night Unsupervised Domain Adaptive Object Detection" />
+    <meta property="og:description" content="Few-Shot Learning from Augmented Label-Uncertain Queries in Bongard-HOI" />
 
         <!--TWITTER-->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="2pcnet" />
-    <meta name="twitter:description" content="2PCNet: Two-Phase Consistency Training for Day-to-Night Unsupervised Domain Adaptive Object Detection" />
-    <meta name="twitter:image" content="https://mikhailkennerley.com/2pcnet/imgs/2pcnet.webp" />
+    <meta name="twitter:title" content="luq" />
+    <meta name="twitter:description" content="Few-Shot Learning from Augmented Label-Uncertain Queries in Bongard-HOI" />
+    <meta name="twitter:image" content="https://chelsielei.github.io/LUQ/imgs/luq.webp" />
 
 
 <!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
@@ -53,9 +53,9 @@
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
-                <b>2PCNet</b>: Two-Phase Consistency Training for Day-to-Night Unsupervised Domain Adaptive Object Detection</br> 
+                <b>Few-Shot Learning from Augmented Label-Uncertain Queries in Bongard-HOI</b> </br> 
                 <small>
-                    CVPR 2023
+                    AAAI 2024
                 </small>
             </h2>
         </div>
@@ -63,22 +63,16 @@
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
                     <li>
-                        <a href="https://mikhailkennerley.com/">
-                          Mikhail Kennerley
-                        </a>
-                        </br>NUS, I2R A*STAR
-                    </li>
-                    <li>
-                        <a href="https://scholar.google.com.sg/citations?user=kt0nCB0AAAAJ&hl=en">
-                            Wang Jian-Gang
-                        </a>
-                        </br>I2R A*STAR
-                    </li>
-                    <li>
-                        <a href="https://scholar.google.com/citations?user=IqAJttsAAAAJ&hl=en">
-                            Bharadwaj Veeravalli
+                        <a href="https://chelsielei.github.io/">
+                          Qinqian Lei
                         </a>
                         </br>NUS
+                    </li>
+                    <li>
+                        <a href="https://scholar.google.com/citations?user=iX7qUlYAAAAJ&hl=en">
+                            Bo Wang
+                        </a>
+                        </br>I2R A*STAR
                     </li>
                     <li>
                         <a href="https://tanrobby.github.io/">
@@ -95,19 +89,19 @@
                 <div class="col-md-4 col-md-offset-4 text-center">
                     <ul class="nav nav-pills nav-justified">
                         <li>
-                            <a href="https://arxiv.org/abs/2303.13853">
+                            <a href="https://arxiv.org/pdf/2312.10586">
                             <image src="img/mip_paper_image.jpg" height="60px">
                                 <h4><strong>Paper</strong></h4>
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="https://youtube.com">
                             <image src="img/youtube_icon.png" height="60px">
                                 <h4><strong>Video</strong></h4>
                             </a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="https://github.com/mecarill/2pcnet">
+                            <a href="https://github.com/ChelsieLei/LUQ/tree/main">
                             <image src="img/github.png" height="60px">
                                 <h4><strong>Code</strong></h4>
                             </a>
@@ -123,7 +117,7 @@
             <figure>
                 <image src="imgs/prop.png" class="img-responsive" alt="overview">
                     <p style="text-align:center; font-style:italic; font-size:smaller;">
-                        2PCNet is able to overcome the error-propagation present in the Mean Teacher framework for nighttime scenes.
+                        This paper aims to recognize the human-object interaction in a few-shot setting.
                     </p>
                 </figure>
 
@@ -131,15 +125,18 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-                    Object detection at night is a challenging problem due to the absence of night image annotations. 
-                    Despite several domain adaptation methods, achieving high-precision results remains an issue. 
-                    False-positive error propagation is still observed in methods using the well-established student-teacher framework, particularly for small-scale and low-light objects. 
-                    This paper proposes a two-phase consistency unsupervised domain adaptation network, 2PCNet, to address these issues. 
-                    The network employs high-confidence bounding-box predictions from the teacher in the first phase and appends them to the student's region proposals for the teacher to re-evaluate in the second phase, resulting in a combination of high and low confidence pseudo-labels. 
-                    The night images and pseudo-labels are scaled-down before being used as input to the student, providing stronger small-scale pseudo-labels. 
-                    To address errors that arise from low-light regions and other night-related attributes in images, we propose a night-specific augmentation pipeline called NightAug. 
-                    This pipeline involves applying random augmentations, such as glare, blur, and noise, to daytime images. 
-                    Experiments on publicly available datasets demonstrate that our method achieves superior results to state-of-the-art methods by 20%, and to supervised models trained directly on the target data.
+                    Detecting human-object interactions (HOI) in a few-shot setting remains a challenge. 
+                    Existing meta-learning methods struggle to extract representative features for classification due to the limited data, while existing few-shot HOI models rely on HOI text labels for classification. 
+                    Moreover, some query images may display visual similarity to those outside their class, such as similar backgrounds between different HOI classes. This makes learning more challenging, especially with limited samples. 
+                    Bongard-HOI epitomizes this HOI few-shot problem, making it the benchmark we focus on in this paper.
+                    In our proposed method, we introduce novel label-uncertain query augmentation techniques to enhance the diversity of the query inputs, aiming to distinguish the positive HOI class from the negative ones.
+                    As these augmented inputs may or may not have the same class label as the original inputs, their class label is unknown. 
+                    Those belonging to a different class become hard samples due to their visual similarity to the original ones.    
+                    Additionally, we introduce a novel pseudo-label generation technique that enables a mean teacher model to learn from the augmented label-uncertain inputs.  
+                    We propose to augment the negative support set for the student model to enrich the semantic information, fostering diversity that challenges and enhances the student's learning.
+                    Experimental results demonstrate that our method sets a new state-of-the-art (SOTA) performance by achieving 68.74% accuracy on the Bongard-HOI benchmark, a significant improvement over the existing SOTA of 66.59%. 
+                    In our evaluation on HICO-FS, a more general few-shot recognition dataset, our method achieves 73.27% accuracy, outperforming the previous SOTA of 71.20% in the 5-way 5-shot task. 
+                    
                 </p>
             </div>
         </div>
@@ -154,10 +151,7 @@
                     <image src="imgs/arch_1.jpg" class="img-responsive" alt="overview"><br>
                 </p>
                 <p class="text-justify">
-                    2PCNet consists of: A student network is trained on both the labelled daytime image, which has been augmented with NightAug, and unlabelled nighttime images. 
-                    A teacher network which is the exponential moving average (EMA) of the student and provides matched pseudo-labels for unsupervised loss. 
-                    We combine the high-confidence pseudo-labels from the teacher in phase 1 and the low-confidence pseudo-labels derived from the student RPN proposals.
-                    This allows matched pseudo-labels to be produced in phase 2 for the weighted consistency loss guiding the student to learn nighttime features.
+                    Overview of our framework:  The novel query (bottom right image) is created by merging the highly representative positive background with the negative HOI foreground, or conversely. The newly generated query is then fed into both the teacher and student models. The teacher network is the exponential moving average (EMA) of the student. Throughout the mean teacher training, the student model processes both the augmentations of images selected from the negative support set and the images from the negative support set that remain unchosen for augmentation and learns from the predictions made by the teacher (pseudo-label). Due to space constraints, 3 out of 6 positive and negative support images, one original query, and one newly generated query are displayed. The term "motor." denotes "motorcycle". 
                 </p>
             </div>
         </div>
@@ -167,17 +161,17 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Results
+                    Qualitative Results
                 </h3>
                 <p class="text-justify">
-                    BDD100K Dataset
+                    Specific Subtasks
                 </p>
-                <image src="imgs/bdd100k_qual.png" class="img-responsive" alt="overview"><br>                
+                <image src="imgs/quali.jpg" class="img-responsive" alt="overview"><br>                
                 <br>
                 <p class="text-justify">
-                    SHIFT Dataset
+                    T-SNE Visualization
                 </p>     
-                <image src="imgs/shift_qual.png" class="img-responsive" alt="overview"><br>  
+                <image src="imgs/quali_tsne.jpg" class="img-responsive" alt="overview"><br>  
 
             </div>
         </div>
@@ -205,14 +199,12 @@
                 </h3>
                 <div class="form-group col-md-10 col-md-offset-1">
                     <textarea id="bibtex" class="form-control" readonly>
-@InProceedings{Kennerley_2023_CVPR,
-    author    = {Kennerley, Mikhail and Wang, Jian-Gang and Veeravalli, Bharadwaj and Tan, Robby T.},
-    title     = {2PCNet: Two-Phase Consistency Training for Day-to-Night Unsupervised Domain Adaptive Object Detection},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    month     = {June},
-    year      = {2023},
-    pages     = {11484-11493}
-}
+@article{lei2023few,
+    title={Few-Shot Learning from Augmented Label-Uncertain Queries in Bongard-HOI},
+    author={Lei, Qinqian and Wang, Bo and Tan, Robby T},
+    journal={arXiv preprint arXiv:2312.10586},
+    year={2023}
+    }
 }</textarea>
                 </div>
             </div>
